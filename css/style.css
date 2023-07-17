@@ -1,0 +1,292 @@
+/*Author: TAN YI JIE 220324B*/
+
+
+*{/*set all margin and padding to zero*/
+    padding:0px;
+    margin:0px;
+}
+
+/*Default: Computer >800px*/
+/* top container */
+#top {
+    color: white;
+    background-color: black;
+    height: 12vh;
+    font-size: 2vw;
+    display: flex;
+}
+#top h1{/*Page title*/
+    flex:20%;
+    padding:1vh 2.5vw 0% ;
+    text-align: center;
+}
+
+#top ul{/*To different areas*/
+    flex:74%;
+    list-style-type: none;
+    overflow: hidden;
+    display:flex;
+    justify-content: space-between;
+}
+#top ul li{
+    width:25%;
+    text-align: center;
+}
+#top ul li a{
+    display:inline-block;
+    /*hit box of link*/
+    padding-top: 3vh;
+    padding-bottom:4.5vh;
+    width:100%;
+
+    text-decoration: none;
+    color: white;
+}
+#top ul li a:hover {/*color when hovered over*/
+    background-color: #414141;
+  }
+
+span{flex: 3%}
+
+/* intro container */
+#intro {
+    height: 78vh;
+    display:flex;
+}
+#intro .text{
+    font-size: 2.5vw;
+    color:rgb(2, 2, 92);
+    padding:18vh 8vw 0vw;
+}
+
+#intro div p{
+    font-size: 300%;
+    font-weight: bold;
+}
+
+#intro .images img{
+    height: 78vh;
+}
+
+/* bot container */
+#bot {
+    background-color: rgb(78, 76, 76);
+    height: 10vh;
+    font-size: 6vh;
+    display:flex;/*allow to change hitbox of link*/
+}
+
+#bot a{
+    padding-top: 1vh;
+    text-align: center;
+    color:white;
+    text-decoration: none;
+    width:100%; /*hit box for about me*/
+}
+
+/*Content Boxes in other webpage*/
+#body{
+    display:flex;
+
+}
+
+#nav{
+    color:white;
+    background-color:#414141;
+    padding-top: 3vw;
+    text-align: center;
+    font-size: 3vw;
+}
+
+#nav h3{
+    text-decoration: underline;
+    padding:0px 1vw;
+}
+ul{
+    list-style-type:none;
+}
+#nav ul li a{
+    padding:1.3vh 1.5vw;/*hitbox of links increase with its own padding*/
+    text-decoration:none;
+    color :white;
+    display:block;
+}
+
+#nav ul li a:hover{/*color when hovered over*/
+    background-color: rgb(42, 44, 44);
+}
+
+/*content*/
+.Section{
+    padding:1vh 1vw;
+    display:flex;
+    font-size: 1.5vw;
+    border:2px solid gray;
+}
+.Section .text{
+    padding-right:1vw;
+}
+.Section h2{
+    text-decoration: underline;
+}
+
+.Section .images img{
+    width:25vw;
+}
+
+.Section iframe{
+    width:25vw;
+    height:100%;
+}
+
+/*Education Page Exlusive*/
+#Primary{background-image: url("../images/bg_primary.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+#Secondary{background-image: url("../images/bg_secondary.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+#Tertiary{background-image: url("../images/bg_tertiary.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+/*Skill Background*/
+.skillbg{background-image: url("../images/bg_skill.png");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+/*Aspiration Background*/
+.aspirationbg{background-image: url("../images/bg_aspiration.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+/*Family Background*/
+.familybg{background-image: url("../images/bg_family.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover; 
+}
+/*games Background*/
+.gamebg{background-image: url("../images/bg_game.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover;  
+}
+
+/*games developement Background*/
+.gamedevbg{background-image: url("../images/bg_gamedev.png");
+    background-repeat: no-repeat; 
+    background-size: cover;  
+}
+
+/*music Background*/
+.musicbg{background-image: url("../images/bg_music.png");
+    background-repeat: no-repeat; 
+    background-size: cover;  
+}
+
+/*youtube background*/
+.youtubebg{background-image: url("../images/bg_youtube.jpg");
+    background-repeat: no-repeat; 
+    background-size: cover;  
+}
+
+/*Typography: Headers should not have tails*/
+#top, #nav , h2, h4, #bot{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*Tablet: 540px < ... < =800px*/
+@media only screen and (max-width:800px) {
+
+    /*other webpages*/
+    .Section{
+        font-size: 2vw;
+    }
+
+    .Section .images img, iframe{
+        width:20vw;
+    }
+}
+
+@media only screen and (max-width:720px) {
+    /* top container */
+    #top{
+        flex-direction:column;
+        height:auto; 
+        width: 100vw; 
+        font-size: 4vh;
+    }
+    #top h1{
+        padding-left: 0px; 
+        padding-right: 0px;
+        width:auto;
+        }
+
+    /* intro */
+    #intro{
+        flex-direction: column-reverse;
+        height: auto;
+        width: 100vw;
+    }
+    #intro .text{
+        flex:6;
+        font-size: 4vh;
+        color:rgb(2, 2, 92);
+        padding:9vh 0px 9vh 0px;
+        text-align:center;
+    }
+    #intro .images img{
+        height: auto;
+        width: 100vw;
+    }
+}
+
+@media only screen and (max-width:600px){
+    /*other webpages*/
+    #body{
+        flex-direction: column;
+    }
+    /*navigation*/
+    #nav{
+        width:100vw; 
+        padding-top: 1vw;
+    }
+    #nav ul{
+        display: flex; 
+        justify-content: space-around;
+    }
+    #nav ul li{
+        width:100%
+    }/*hitbox of sections*/
+
+    /*content, sections*/
+    .Section{
+        flex-direction:column-reverse; 
+        text-align: center;
+        font-size: 3vh;
+    }
+    .Section .images img{
+        height:30vh;
+        width:auto;
+    }
+    .Section iframe{
+        width:250px
+    }
+    
+
+}
+
+
+/*Mobile: <= 540px*/
+@media only screen and (max-width: 540px) {
+    
+    #top ul{
+        font-size: 3.5vh;
+    }
+}
+@media only screen and (max-width: 500px) {
+    #top ul{
+        font-size: 4vw;
+    }
+}
